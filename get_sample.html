@@ -1,0 +1,51 @@
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="otupy,Python,スクレイピング">
+    <meta name="description" content="このサイトの説明文">
+    <title>スクレイピングサンプルページ</title>
+  </head>
+  <body>
+    <div id="main" class="class1">
+      <h1>スクレイピング講座</h1>
+      <h2>GETサンプル</h2>
+      <div class="contents1">
+        <h3>spanタグ</h3>
+        <span class="class2"><a href="http://www.otupy.net/">リンク1</a></span><br>
+        <span class="class2"><a href="http://www.otupy.net/">リンク2</a></span><br>
+        <span class="class3"><a href="http://www.otupy.net/">リンク3</a></span><br>
+      </div>
+      <div class="contents2">
+        <h3>日向坂の推し</h3>
+        <table id="tb1" border="1">
+          <tr>
+            <th>名前</th>
+            <th>加入期</th>
+          </tr>
+          <tr>
+            <td>齊藤京子</td>
+            <td>1期生</td>
+          </tr>
+          <tr>
+            <td>小坂菜緒</td>
+            <td>2期生</td>
+          </tr>
+        </table>      
+      </div>
+    </div>
+      <div class="contents3">
+        <h3>課金ユーザーランキング</h3>
+        <ul id="js"></ul>      
+      </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <script >
+      let output = document.querySelector('#js');
+      for ( var i = 0; i < 3; i++ ) {
+        let rand_str = Math.random().toString(32).substring(2);
+        output.innerHTML += '<li>' + (i+1) + '<p>Name : ' + rand_str + '</p></li>';
+      }
+    </script>
+  </body>
+</html>

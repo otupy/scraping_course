@@ -1,0 +1,42 @@
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="otupy,Python,スクレイピング">
+    <meta name="description" content="このサイトの説明文">
+    <title>スクレイピングサンプルページ</title>
+  </head>
+  <body>
+    <div id="main" class="class1">
+      <h1>スクレイピング講座</h1>
+      <h2>POSTサンプル</h2>
+      <div class="contents4">
+        <h3>入力フォーム</h3>
+        <form action="#" method="post">
+        <div>
+          <label for="username">Username </label>
+          <input type="text" id="username" name="username">
+        </div>
+        <div>
+          <label for="pass">Password </label>
+          <input type="password" id="pass" name="password">
+        </div>
+        <div>
+          <button type="button" onclick="sample1()">Sign in</button>
+          <input type="reset" value="Reset">
+        </div>
+        <div id="form1"></div>
+        </form>  
+      </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <script >
+      function sample1() {
+        let form_out = document.querySelector('#form1');
+        let user = document.getElementById('username').value;
+        let pass = document.getElementById('pass').value;
+        form_out.innerHTML = user+' : '+pass;
+      }
+    </script>
+  </body>
+</html>
